@@ -1,0 +1,33 @@
+{% extends 'base/base.html' %}
+{% block body %}
+
+<div class="container my-4">
+    <h3>Submited form datas :</h3>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">sno</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone no</th>
+
+          </tr>
+        </thead>
+        <tbody>
+        {% for data in form_data %}
+          <tr>
+            <th scope="row">1</th>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.address}}</td>
+            <td>{{data.phoneno}}</td>
+
+          </tr>
+        {% endfor %}
+       
+        </tbody>
+      </table>
+</div>
+
+{% endblock %}

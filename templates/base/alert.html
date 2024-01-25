@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+  .alert {
+      padding: 15px;
+      background-color: #d1e7dd;
+      color: #0f5132;
+      border: 1px solid #d1e7dd;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      position: relative;
+  }
+      
+        /* Styles for the close button */
+        .close {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+      </style>
+
+
+
+ 
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert" id="myAlert">
+    {{message}}
+    <span class="close" onclick="closeAlert()">&times;</span>
+  </div>
+  {% endfor %}
+  {% endif %}
+
+<script>
+    function closeAlert() {
+        var alert = document.getElementById('myAlert');
+        alert.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
+

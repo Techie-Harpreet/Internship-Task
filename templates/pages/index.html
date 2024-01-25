@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+{% block body %}
+
+<div class="container my-4">
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">Hello</h1>
+      <p class="col-md-8 fs-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore voluptatibus architecto et, rem fugit dolor eligendi voluptas quis est quidem velit ex, quam doloribus consectetur. Eius quidem iusto animi nisi?</p>
+      <a href="{% url 'dynamic-data' %}">
+      <button class="btn btn-primary btn-lg" type="button">Click to Show Dynamic Content </button>
+    </a>
+    <a href="{% url 'add-form-data' %}">
+      <button class="btn btn-primary btn-lg" type="button">Click to Add Form data </button>
+    </a>
+
+    <a href="{% url 'show-form-data' %}">
+      <button class="btn btn-primary btn-lg" type="button">Click to Show Form data </button>
+
+    </a>
+
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
